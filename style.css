@@ -1,0 +1,382 @@
+/* reset */
+* {
+	padding: 0;
+	margin: 0;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* font size,color */
+#branding h1,
+#form-container {
+	font-weight: normal;
+	color: #CFE7FF;
+}
+
+/* header */
+header {
+	width: 100%;
+	height: 15.2vh;
+	background: rgba(0, 0, 0, 0.63);
+	border-bottom: 4px solid #0052A3;
+}
+
+#logo-container {
+	position: absolute;
+	left: 3.8125rem;
+	top: 1.5rem;
+}
+
+#branding {
+	position: absolute;
+	left: 8.0625rem;
+	top: 2.125rem;
+}
+
+#branding h1 {
+	font-size: 26px;
+}
+
+#form-container {
+	position: absolute;
+	left: 23.25rem;
+	top: 2.125rem;
+}
+
+#search-field {
+	width: 4.875rem;
+	height: 2rem;
+	border-radius: 11px;
+	border: none;
+	outline: none;
+	background-color: #CFE7FF;
+	box-sizing: border-box;
+	padding: 5px 15px 5px 30px;
+	text-overflow: ellipsis;
+
+	background-image: url('./multimedia/img/Vector.png');
+	background-position: .375rem .5rem;
+	background-repeat: no-repeat;
+	transition: width 0.8s, background-position 0.8s, padding 0.8s;
+}
+
+#search-field:focus {
+	width: 14.625rem;
+	background-image: url('./multimedia/img/Vector.png');
+	background-repeat: no-repeat;
+	background-position: 13.25rem .5rem;
+	background-color: #CFE7FF;
+	padding: 5px 5px 5px 5px;
+}
+
+#search-btn {
+	visibility: hidden;
+	position: absolute;
+	left: 13.25rem;
+	top: .5rem;
+	z-index: 4;
+}
+
+#form-container:focus-within #search-btn {
+	visibility: visible;
+	background-color: transparent;
+	border: none;
+	font-size: 16px;
+	opacity: 0;
+}
+
+#nav-menu {
+	position: absolute;
+	left: 48.9375rem;
+	top: 2.25rem;
+	width: 31.5rem;
+}
+
+#nav-menu ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between
+}
+
+#nav-menu a {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: #CFE7FF;
+	position: relative;
+}
+
+#nav-menu ul li a::before {
+	content: "";
+	position: absolute;
+	top: 1.25rem;
+	left: 0;
+	height: .125rem;
+	width: 0%;
+	border-bottom: 2px solid #CFE7FF;
+	transition: width 0.4s linear;
+}
+
+#nav-menu a:hover::before {
+	width: 100%;
+}
+
+/* background */
+#hero-bg {
+	background: url("./multimedia/bg/herobg.png") top left no-repeat;
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: -1;
+}
+
+/* hero text */
+#hero-text h1 {
+	color: #CFE7FF;
+	font-weight: bold;
+	position: absolute;
+	top: 161px;
+}
+
+#hero-text {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+#hero-text button {
+	position: absolute;
+	width: 122px;
+	height: 34px;
+	top: 219px;
+	background: #1B262C;
+	border-radius: 7px;
+	border: none;
+	font-size: 16px;
+	transition: background 0.3s;
+}
+
+#hero-text button:hover {
+	background: #1C4D67;
+}
+
+#hero-text button a {
+	text-decoration: none;
+	color: #CFE7FF;
+}
+
+/* hero-page end */
+
+/* game category start */
+#category-container {
+	position: absolute;
+	width: 100%;
+	height: 66.375rem;
+	left: 0px;
+	top: 39.0625rem;
+	background: #CFE7FF;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.allCategory {
+	width: 25.5rem;
+	height: 25.5rem;
+	position: relative;
+}
+
+.allCategory img {
+	transition: .5s ease;
+}
+
+.category-btn {
+	opacity: 0;
+}
+
+.allCategory:hover img {
+	filter: brightness(46%);
+}
+
+.allCategory:hover .category-btn {
+	position: absolute;
+	width: 9.4375rem;
+	height: 2.0625rem;
+	left: 8.0625rem;
+	top: 18.4375rem;
+	border: none;
+	background: #CFE7FF;
+	border-radius: 7px;
+	font-weight: bold;
+	font-size: 19px;
+	color: #126399;
+	opacity: 1;
+}
+
+/* game category end*/
+
+/* top game start */
+#game-container {
+	background: url("./multimedia/bg/topGames.png") top left no-repeat;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 105.4375rem;
+}
+
+#glass {
+	position: absolute;
+	width: 63.875rem;
+	height: 26.25rem;
+	left: 10rem;
+	top: 4.0625rem;
+	background: linear-gradient(99.3deg, rgba(255, 255, 255, 0.42) -6.99%, rgba(255, 255, 255, 0.28) 53.22%, rgba(255, 255, 255, 0.01) 105.24%);
+	backdrop-filter: blur(12px);
+	/* Note: backdrop-filter has minimal browser support */
+	border-radius: 36px;
+}
+
+#front-gamepad {
+	background: url("./multimedia/bg/gamepad_front.png") top left no-repeat;
+	position: absolute;
+	left: 9.76%;
+	top: 82%;
+	height: 11.2925rem;
+	width: 10.80875rem;
+	transform: rotate(13.29deg);
+}
+
+#glass [id$="img"] {
+	position: absolute;
+	border-radius: 7px;
+	left: 3.5rem;
+	box-shadow: 4px 4px 7px #2B76A8;
+}
+
+#raji-img {
+	top: 3.5rem;
+}
+
+#starWar-img {
+	top: 10.1875rem;
+}
+
+#spider-img {
+	top: 16.875rem;
+}
+
+#glass [id$="txt"] {
+	position: absolute;
+	left: 13.25rem;
+	top: 4.3125rem;
+	font-size: 23px;
+	color: #0E4266;
+}
+
+#starWar-txt {
+	top: 41.9% !important;
+}
+
+#spider-txt {
+	top: 17.6875rem !important;
+}
+
+[id$="progress"] {
+	position: absolute;
+	width: 27.5rem;
+	height: 1.75rem;
+	left: 13.3125rem;
+	top: 6.625rem;
+	background: #008BE8;
+	border: 1px solid #1674B3;
+	border-radius: 7px;
+}
+
+#starWar-progress {
+	top: 13.3125rem;
+}
+
+#spider-progress {
+	top: 20rem;
+}
+
+[id$="progress"]::before {
+	content: "";
+	position: absolute;
+	width: 176px;
+	height: 28px;
+	background: #126399;
+	border-radius: 7px 0px 0px 7px;
+}
+#starWar-progress::before {
+	width: 136.4px;
+}
+
+#spider-progress::before {
+	width: 127.6px;
+}
+
+[id$="progress"]::after {
+	content: "31%";
+	position: absolute;
+	left: 48px;
+	top: -1px;
+	font-weight: 500;
+	font-size: 23px;
+	color: #FFFFFF;
+}
+
+#raji-progress::after {
+	content: "40%";
+}
+
+#spider-progress::after {
+	content: "29%";
+}
+
+[id$="num"] {
+	position: absolute;
+	left: 68.2%;
+	top: 24.29%;
+	font-size: 29px;
+	color: #0E4266;
+}
+
+#starWar-num {
+	top: 49.76%
+}
+
+#spider-num {
+	top: 75.24%;
+}
+
+#glass [id$="btn"] {
+	position: absolute;
+	width: 128px;
+	height: 28px;
+	left: 838px;
+	top: 102px;
+	background: #126399;
+	border-radius: 7px;
+	border: none;
+	font-size: 15px;
+	color: #FFFFFF;
+	transition: background 0.3s;
+}
+
+#starWar-btn {
+	top: 209px !important;
+}
+
+#spider-btn {
+	top: 316px !important;
+}
+
+#glass [id$="btn"]:hover {
+	background: #0D456A;
+}
